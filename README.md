@@ -1,6 +1,6 @@
 # ECE178-FPGAEthernetComm
 
-<h1>**Abstract**</h1>
+<h1>Abstract</h1>
 
 A firewall can be defined as a network security device that monitors incoming and outgoing traffic with the ability to permit or block the flow of data based on a set of given security rules. The DE2-115 board has ethernet capabilities that allow for high-speed transmission of data. The FPGA board has two ethernet ports that can be used to implement a firewall between two connected devices.
 
@@ -14,7 +14,7 @@ In the OSI model ethernet is present in the first two layers. In Figure 1 it sho
 ![OSI Model Image](https://github.com/vincetrien-ngo/ECE178-FPGAEthernetComm/blob/master/img/blockdiagram.PNG)
 ![OSI Model Image](https://github.com/vincetrien-ngo/ECE178-FPGAEthernetComm/blob/master/img/qsysblock.PNG)
 
-<h1>**Proposed Project:**</h1>
+<h1>Proposed Project:</h1>
 
 We would like insert a DE2-115 FPGA board firewall between two computers transmitting data through an ethernet cable. We intend to explore simple transmission of data between computers, and build signatures from that transmission of packets we would like to restrict. We will build multiple signatures to show that the firewall is able to successfully block and allow specific traffic. The criteria for blocking traffic will be very simplified from a true production firewall, and will be based off of identification of the sending machine, and the pre-determined signatures. 
 The system design will use the same system that has been designed in the classroom up to this point, with a few components added in Qsys. The Triple Speed Ethernet component, and two Scatter-Gather DMA Controllers, one for receiving and one for transmitting, and finally a descriptor memory. The descriptor memory serves as a memory dedicated for the ethernet data transmission, and can be used as a buffer for information to be stored while it is processed.

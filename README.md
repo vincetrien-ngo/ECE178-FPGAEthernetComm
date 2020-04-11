@@ -7,5 +7,9 @@ A firewall can be defined as a network security device that monitors incoming an
 The intent of this project is to have two devices that will transmit sets of data between themselves, and to design and program a system on the DE2-115 FPGA board that will be able to examine data transmitted between devices and block certain data based on rules specified by the team. Data could be restricted based on pre-determined patterns of data, as well as identification from the transmitting devices. Another intent of this project is to be able to create a packet using the board and send any form of information to a device.
 
 ![OSI Model Image](https://github.com/vincetrien-ngo/ECE178-FPGAEthernetComm/blob/master/img/osimodel.PNG)
+Figure 1: OSI Model, Where Ethernet Stands
+
+In the OSI model ethernet is present in the first two layers. In Figure 1 it shows the Data Link layer and the Physical Layer being the ones that use ethernet. Though for the Data Link layer only half of it is used. The Media Access Control (MAC) sublayer while the entirelty of the physical layer is used.
+
 ![OSI Model Image](https://github.com/vincetrien-ngo/ECE178-FPGAEthernetComm/blob/master/img/blockdiagram.PNG)
 ![OSI Model Image](https://github.com/vincetrien-ngo/ECE178-FPGAEthernetComm/blob/master/img/qsysblock.PNG)

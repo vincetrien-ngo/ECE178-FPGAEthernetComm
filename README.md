@@ -14,8 +14,12 @@ In the OSI model ethernet is present in the first two layers. In Figure 1 it sho
 ![OSI Model Image](https://github.com/vincetrien-ngo/ECE178-FPGAEthernetComm/blob/master/img/blockdiagram.PNG)
 <h3>Figure 2: Block Diagram of the Triple-Speed Ethernet System</h3>
 
+Figure 2 shows how the different components on the FPGA will interact with each other using a block diagram.
+
 ![OSI Model Image](https://github.com/vincetrien-ngo/ECE178-FPGAEthernetComm/blob/master/img/qsysblock.PNG)
 <h3>Figure 3: Block Diagram of the Qsys Subsystem</h3>
+
+Figure 3 shows the bloack diagram that will be created using Qsys. Triple-Speed ethernet can be found as a subsystem within Qsys.
 
 <h1>Proposed Project:</h1>
 

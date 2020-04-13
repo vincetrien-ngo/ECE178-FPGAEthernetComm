@@ -21,6 +21,11 @@ Figure 2 shows how the different components on the FPGA will interact with each 
 
 Figure 3 shows the bloack diagram that will be created using Qsys. Triple-Speed ethernet can be found as a subsystem within Qsys.
 
+![OSI Model Image](https://github.com/vincetrien-ngo/ECE178-FPGAEthernetComm/blob/master/img/blocks_fpga_firewall.png)
+<h4>Figure 4: Diagram Showing Blocking and Allowing Packets of Information</h4>
+
+In order to block or allow certain packet types the header information needs to be inspected. Different algorithims will be used to accomplish this. Figure 4 illustrates this.
+
 <h1>Proposed Project:</h1>
 
 We would like insert a DE2-115 FPGA board firewall between two computers transmitting data through an ethernet cable. We intend to explore simple transmission of data between computers, and build signatures from that transmission of packets we would like to restrict. We will build multiple signatures to show that the firewall is able to successfully block and allow specific traffic. The criteria for blocking traffic will be very simplified from a true production firewall, and will be based off of identification of the sending machine, and the pre-determined signatures. 

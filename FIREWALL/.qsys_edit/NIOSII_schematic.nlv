@@ -1,0 +1,62 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst NIOSII.seg7_6 -pg 1 -lvl 6 -y 1960
+preplace inst NIOSII.seg7_7 -pg 1 -lvl 6 -y 2060
+preplace inst NIOSII.timer_0 -pg 1 -lvl 5 -y 720
+preplace inst NIOSII.GREENLED -pg 1 -lvl 6 -y 1360
+preplace inst NIOSII -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst NIOSII.SWITCH -pg 1 -lvl 6 -y 1260
+preplace inst NIOSII.TSE -pg 1 -lvl 6 -y 90
+preplace inst NIOSII.REDLED -pg 1 -lvl 6 -y 960
+preplace inst NIOSII.sgdma_rx -pg 1 -lvl 7 -y 130
+preplace inst NIOSII.seg7_0 -pg 1 -lvl 6 -y 1460
+preplace inst NIOSII.sdram -pg 1 -lvl 4 -y 600
+preplace inst NIOSII.NIOS2.reset_bridge -pg 1
+preplace inst NIOSII.seg7_1 -pg 1 -lvl 6 -y 1560
+preplace inst NIOSII.clocks.reset_from_locked -pg 1
+preplace inst NIOSII.NIOS2 -pg 1 -lvl 4 -y 790
+preplace inst NIOSII.seg7_2 -pg 1 -lvl 6 -y 1660
+preplace inst NIOSII.descriptor_memory -pg 1 -lvl 5 -y 820
+preplace inst NIOSII.RAMs1 -pg 1 -lvl 6 -y 800
+preplace inst NIOSII.PUSHB -pg 1 -lvl 6 -y 400
+preplace inst NIOSII.seg7_3 -pg 1 -lvl 6 -y 2160
+preplace inst NIOSII.TSE.i_tse_mac -pg 1
+preplace inst NIOSII.NIOS2.cpu -pg 1
+preplace inst NIOSII.JTAG -pg 1 -lvl 6 -y 700
+preplace inst NIOSII.sysid_qsys_0 -pg 1 -lvl 6 -y 880
+preplace inst NIOSII.seg7_4 -pg 1 -lvl 6 -y 1760
+preplace inst NIOSII.clocks.sys_pll -pg 1
+preplace inst NIOSII.clocks -pg 1 -lvl 1 -y 560
+preplace inst NIOSII.sgdma_tx -pg 1 -lvl 5 -y 600
+preplace inst NIOSII.seg7_5 -pg 1 -lvl 6 -y 1860
+preplace inst NIOSII.NIOS2.clock_bridge -pg 1
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)TSE.mac_mdio_connection,(SLAVE)NIOSII.tse_mac_mdio_connection) 1 0 6 NJ 140 NJ 140 NJ 140 NJ 140 NJ 140 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)seg7_6.external_connection,(SLAVE)NIOSII.seg7_6) 1 0 6 NJ 1990 NJ 1990 NJ 1990 NJ 1990 NJ 1990 NJ
+preplace netloc INTERCONNECT<net_container>NIOSII</net_container>(SLAVE)sysid_qsys_0.reset,(SLAVE)PUSHB.reset,(SLAVE)seg7_1.reset,(SLAVE)descriptor_memory.reset1,(SLAVE)seg7_3.reset,(SLAVE)sdram.reset,(SLAVE)seg7_2.reset,(SLAVE)REDLED.reset,(SLAVE)TSE.reset_connection,(SLAVE)seg7_0.reset,(SLAVE)NIOS2.reset,(MASTER)NIOS2.debug_reset_request,(SLAVE)timer_0.reset,(SLAVE)seg7_5.reset,(SLAVE)seg7_7.reset,(SLAVE)seg7_6.reset,(SLAVE)GREENLED.reset,(SLAVE)sgdma_tx.reset,(SLAVE)seg7_4.reset,(SLAVE)RAMs1.reset1,(SLAVE)JTAG.reset,(SLAVE)sgdma_rx.reset,(SLAVE)SWITCH.reset,(MASTER)clocks.reset_source) 1 1 6 NJ 570 NJ 570 990 750 1550 930 1890 370 2260
+preplace netloc FAN_OUT<net_container>NIOSII</net_container>(SLAVE)REDLED.clk,(SLAVE)sdram.clk,(SLAVE)seg7_5.clk,(SLAVE)TSE.transmit_clock_connection,(SLAVE)PUSHB.clk,(SLAVE)timer_0.clk,(SLAVE)seg7_0.clk,(SLAVE)RAMs1.clk1,(SLAVE)SWITCH.clk,(SLAVE)sgdma_rx.clk,(SLAVE)sgdma_tx.clk,(SLAVE)seg7_3.clk,(SLAVE)seg7_1.clk,(MASTER)clocks.sys_clk,(SLAVE)descriptor_memory.clk1,(SLAVE)GREENLED.clk,(SLAVE)NIOS2.clk,(SLAVE)seg7_6.clk,(SLAVE)seg7_7.clk,(SLAVE)TSE.receive_clock_connection,(SLAVE)TSE.control_port_clock_connection,(SLAVE)seg7_4.clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)seg7_2.clk,(SLAVE)JTAG.clk) 1 1 6 NJ 610 NJ 610 1010 710 1570 910 1810 30 2260
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.tse_mac_rgmii_connection,(SLAVE)TSE.mac_rgmii_connection) 1 0 6 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.seg7_3,(SLAVE)seg7_3.external_connection) 1 0 6 NJ 2190 NJ 2190 NJ 2190 NJ 2190 NJ 2190 NJ
+preplace netloc POINT_TO_POINT<net_container>NIOSII</net_container>(MASTER)sgdma_tx.out,(SLAVE)TSE.transmit) 1 5 1 1870
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.tse_pcs_mac_tx_clock_connection,(SLAVE)TSE.pcs_mac_tx_clock_connection) 1 0 6 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(MASTER)NIOSII.sdram_clk,(MASTER)clocks.sdram_clk) 1 1 7 NJ 590 NJ 590 NJ 590 NJ 590 NJ 590 NJ 590 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.reset,(SLAVE)clocks.ref_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>NIOSII</net_container>(SLAVE)timer_0.irq,(MASTER)NIOS2.irq,(SLAVE)PUSHB.irq,(SLAVE)JTAG.irq,(SLAVE)sgdma_rx.csr_irq,(SLAVE)sgdma_tx.csr_irq) 1 4 3 1590 710 1830 390 2240
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)TSE.mac_misc_connection,(SLAVE)NIOSII.tse_mac_misc_connection) 1 0 6 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ
+preplace netloc INTERCONNECT<net_container>NIOSII</net_container>(MASTER)sgdma_rx.descriptor_write,(SLAVE)seg7_0.s1,(SLAVE)seg7_6.s1,(SLAVE)sgdma_rx.csr,(SLAVE)SWITCH.s1,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)seg7_3.s1,(SLAVE)seg7_2.s1,(SLAVE)PUSHB.s1,(MASTER)sgdma_tx.descriptor_write,(MASTER)NIOS2.instruction_master,(MASTER)sgdma_rx.m_write,(SLAVE)seg7_7.s1,(SLAVE)seg7_5.s1,(SLAVE)seg7_4.s1,(MASTER)sgdma_tx.m_read,(SLAVE)seg7_1.s1,(SLAVE)sgdma_tx.csr,(SLAVE)sdram.s1,(SLAVE)GREENLED.s1,(MASTER)NIOS2.data_master,(MASTER)sgdma_rx.descriptor_read,(SLAVE)descriptor_memory.s1,(SLAVE)NIOS2.debug_mem_slave,(SLAVE)JTAG.avalon_jtag_slave,(SLAVE)TSE.control_port,(SLAVE)REDLED.s1,(MASTER)sgdma_tx.descriptor_read,(SLAVE)RAMs1.s1,(SLAVE)timer_0.s1) 1 3 5 1030 730 1530 950 1850 50 2240 120 2480
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.tse_mac_status_connection,(SLAVE)TSE.mac_status_connection) 1 0 6 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)seg7_0.external_connection,(SLAVE)NIOSII.seg7_0) 1 0 6 NJ 1490 NJ 1490 NJ 1490 NJ 1490 NJ 1490 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)clocks.ref_clk,(SLAVE)NIOSII.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.switches,(SLAVE)SWITCH.external_connection) 1 0 6 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)seg7_5.external_connection,(SLAVE)NIOSII.seg7_5) 1 0 6 NJ 1890 NJ 1890 NJ 1890 NJ 1890 NJ 1890 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.seg7_1,(SLAVE)seg7_1.external_connection) 1 0 6 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.sdram_wire,(SLAVE)sdram.wire) 1 0 4 NJ 670 NJ 670 NJ 670 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)TSE.pcs_mac_rx_clock_connection,(SLAVE)NIOSII.tse_pcs_mac_rx_clock_connection) 1 0 6 NJ 220 NJ 220 NJ 220 NJ 220 NJ 220 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.seg7_2,(SLAVE)seg7_2.external_connection) 1 0 6 NJ 1690 NJ 1690 NJ 1690 NJ 1690 NJ 1690 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)REDLED.external_connection,(SLAVE)NIOSII.redleds) 1 0 6 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.push_buttons,(SLAVE)PUSHB.external_connection) 1 0 6 NJ 430 NJ 430 NJ 430 NJ 430 NJ 430 NJ
+preplace netloc POINT_TO_POINT<net_container>NIOSII</net_container>(MASTER)TSE.receive,(SLAVE)sgdma_rx.in) 1 6 1 N
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)seg7_7.external_connection,(SLAVE)NIOSII.seg7_7) 1 0 6 NJ 2090 NJ 2090 NJ 2090 NJ 2090 NJ 2090 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)seg7_4.external_connection,(SLAVE)NIOSII.seg7_4) 1 0 6 NJ 1790 NJ 1790 NJ 1790 NJ 1790 NJ 1790 NJ
+preplace netloc EXPORT<net_container>NIOSII</net_container>(SLAVE)NIOSII.greenleds,(SLAVE)GREENLED.external_connection) 1 0 6 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ
+levelinfo -pg 1 0 200 2590
+levelinfo -hier NIOSII 210 290 640 970 1290 1650 2090 2290 2500

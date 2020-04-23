@@ -1,0 +1,13 @@
+10:19:53 **** Incremental Build of configuration Nios II for project Lab5 ****
+make all 
+Info: Building ../Lab5_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab5_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab5_bsp//HAL/inc -I../Lab5_bsp/ -I../Lab5_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c:90:38: fatal error: altera_avalon_timer_regs.h: No such file or directory
+compilation terminated.
+make: *** [obj/default/hello_world_small.o] Error 1
+
+10:19:54 Build Finished (took 1s.124ms)
+

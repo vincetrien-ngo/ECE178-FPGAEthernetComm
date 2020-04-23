@@ -100,7 +100,7 @@
     </sld_info>
     <sld_info hpath="NIOSII:mysys" name="mysys">
       <assignment_values>
-        <assignment_value text="QSYS_NAME NIOSII HAS_SOPCINFO 1 GENERATION_ID 1587664094"/>
+        <assignment_value text="QSYS_NAME NIOSII HAS_SOPCINFO 1 GENERATION_ID 1587671406"/>
       </assignment_values>
       <parameters/>
     </sld_info>
